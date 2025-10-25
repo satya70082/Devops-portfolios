@@ -126,9 +126,9 @@ const Hero = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 0.8 + index * 0.1, duration: 0.5 }}
                 whileHover={{ scale: 1.05, y: -5 }}
-                className="bg-gray-800/30 backdrop-blur-sm border border-cyan-500/20 rounded-xl p-6 hover:border-cyan-500/40 transition-all duration-300"
+                className="bg-gray-800/30 backdrop-blur-sm border border-amber-500/20 rounded-xl p-6 hover:border-rose-500/40 transition-all duration-300"
               >
-                <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-2">
+                <h3 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-amber-400 via-rose-500 to-pink-500 bg-clip-text text-transparent mb-2">
                   {stat.value}
                 </h3>
                 <p className="text-gray-400 text-sm">{stat.label}</p>
