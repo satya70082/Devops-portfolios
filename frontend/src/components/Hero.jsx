@@ -7,14 +7,14 @@ const Hero = () => {
   const { personal, stats } = portfolioData;
 
   const floatingIcons = [
-    { Icon: Cloud, color: 'text-cyan-400', delay: 0, x: -20, y: -20 },
-    { Icon: Server, color: 'text-blue-400', delay: 0.2, x: 20, y: -30 },
-    { Icon: Database, color: 'text-cyan-300', delay: 0.4, x: -30, y: 20 },
-    { Icon: Container, color: 'text-blue-300', delay: 0.6, x: 30, y: 10 },
-    { Icon: Network, color: 'text-cyan-500', delay: 0.8, x: -10, y: -40 },
-    { Icon: Shield, color: 'text-blue-500', delay: 1, x: 10, y: 30 },
-    { Icon: Code, color: 'text-cyan-600', delay: 1.2, x: -40, y: 10 },
-    { Icon: Terminal, color: 'text-blue-600', delay: 1.4, x: 40, y: -10 }
+    { Icon: Cloud, color: 'text-amber-400', delay: 0, x: -20, y: -20 },
+    { Icon: Server, color: 'text-rose-400', delay: 0.2, x: 20, y: -30 },
+    { Icon: Database, color: 'text-lime-400', delay: 0.4, x: -30, y: 20 },
+    { Icon: Container, color: 'text-pink-400', delay: 0.6, x: 30, y: 10 },
+    { Icon: Network, color: 'text-amber-500', delay: 0.8, x: -10, y: -40 },
+    { Icon: Shield, color: 'text-rose-500', delay: 1, x: 10, y: 30 },
+    { Icon: Code, color: 'text-lime-500', delay: 1.2, x: -40, y: 10 },
+    { Icon: Terminal, color: 'text-pink-500', delay: 1.4, x: 40, y: -10 }
   ];
 
   return (
