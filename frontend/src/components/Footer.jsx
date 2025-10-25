@@ -8,7 +8,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="relative bg-gray-900 border-t border-cyan-500/20">
+    <footer className="relative bg-gray-900 border-t border-rose-500/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid md:grid-cols-3 gap-8">
           {/* Left - Brand */}
@@ -18,7 +18,7 @@ const Footer = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent mb-3">
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-amber-400 to-pink-500 bg-clip-text text-transparent mb-3">
               {personal.name}
             </h3>
             <p className="text-gray-400 text-sm">
@@ -34,13 +34,13 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-center"
           >
-            <h4 className="text-cyan-400 font-semibold mb-3">Quick Links</h4>
+            <h4 className="text-amber-400 font-semibold mb-3">Quick Links</h4>
             <div className="flex flex-wrap justify-center gap-4">
               {['Home', 'About', 'Skills', 'Projects', 'Contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => document.getElementById(item.toLowerCase()).scrollIntoView({ behavior: 'smooth' })}
-                  className="text-gray-400 hover:text-cyan-400 transition-colors text-sm"
+                  className="text-gray-400 hover:text-amber-400 transition-colors text-sm"
                 >
                   {item}
                 </button>
@@ -56,14 +56,14 @@ const Footer = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-right"
           >
-            <h4 className="text-cyan-400 font-semibold mb-3">Connect</h4>
+            <h4 className="text-amber-400 font-semibold mb-3">Connect</h4>
             <div className="flex justify-end gap-4">
               <motion.a
                 href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="w-10 h-10 bg-rose-500/10 border border-rose-500/30 rounded-lg flex items-center justify-center text-amber-400 hover:bg-rose-500/20 transition-colors"
               >
                 <span className="sr-only">LinkedIn</span>
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -75,7 +75,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="w-10 h-10 bg-rose-500/10 border border-rose-500/30 rounded-lg flex items-center justify-center text-amber-400 hover:bg-rose-500/20 transition-colors"
               >
                 <span className="sr-only">GitHub</span>
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -85,7 +85,7 @@ const Footer = () => {
               <motion.a
                 href={`mailto:${personal.email}`}
                 whileHover={{ scale: 1.1, y: -2 }}
-                className="w-10 h-10 bg-cyan-500/10 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:bg-cyan-500/20 transition-colors"
+                className="w-10 h-10 bg-rose-500/10 border border-rose-500/30 rounded-lg flex items-center justify-center text-amber-400 hover:bg-rose-500/20 transition-colors"
               >
                 <span className="sr-only">Email</span>
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,10 +102,10 @@ const Footer = () => {
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
-          className="mt-12 pt-8 border-t border-cyan-500/20 text-center"
+          className="mt-12 pt-8 border-t border-rose-500/20 text-center"
         >
           <p className="text-gray-400 text-sm flex items-center justify-center">
-            Made with <Heart className="w-4 h-4 mx-2 text-red-400" /> and <Code className="w-4 h-4 mx-2 text-cyan-400" /> by {personal.name}
+            Made with <Heart className="w-4 h-4 mx-2 text-red-400" /> and <Code className="w-4 h-4 mx-2 text-amber-400" /> by {personal.name}
           </p>
           <p className="text-gray-500 text-xs mt-2">
             © {currentYear} All rights reserved.

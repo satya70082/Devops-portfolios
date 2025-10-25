@@ -48,8 +48,8 @@ const Contact = () => {
     <section id="contact" className="relative py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-rose-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -62,11 +62,11 @@ const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-400 to-pink-500 bg-clip-text text-transparent">
               Get In Touch
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-pink-500 mx-auto rounded-full"></div>
           <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
             Feel free to reach out for collaborations, opportunities, or just a friendly chat about DevOps and Cloud technologies!
           </p>
@@ -81,17 +81,17 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="md:col-span-2 space-y-6"
           >
-            <div className="bg-gray-800/40 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-6">Contact Information</h3>
+            <div className="bg-gray-800/40 backdrop-blur-sm border border-rose-500/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-amber-400 mb-6">Contact Information</h3>
               
               <div className="space-y-4">
                 <motion.a
                   href={`mailto:${personal.email}`}
                   whileHover={{ x: 5 }}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
+                  className="flex items-center text-gray-300 hover:text-amber-400 transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-cyan-500/20 transition-colors">
-                    <Mail className="w-5 h-5 text-cyan-400" />
+                  <div className="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-rose-500/20 transition-colors">
+                    <Mail className="w-5 h-5 text-amber-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Email</p>
@@ -104,10 +104,10 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
+                  className="flex items-center text-gray-300 hover:text-amber-400 transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-cyan-500/20 transition-colors">
-                    <Linkedin className="w-5 h-5 text-cyan-400" />
+                  <div className="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-rose-500/20 transition-colors">
+                    <Linkedin className="w-5 h-5 text-amber-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">LinkedIn</p>
@@ -120,10 +120,10 @@ const Contact = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   whileHover={{ x: 5 }}
-                  className="flex items-center text-gray-300 hover:text-cyan-400 transition-colors group"
+                  className="flex items-center text-gray-300 hover:text-amber-400 transition-colors group"
                 >
-                  <div className="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-cyan-500/20 transition-colors">
-                    <Github className="w-5 h-5 text-cyan-400" />
+                  <div className="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-rose-500/20 transition-colors">
+                    <Github className="w-5 h-5 text-amber-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">GitHub</p>
@@ -135,8 +135,8 @@ const Contact = () => {
                   whileHover={{ x: 5 }}
                   className="flex items-center text-gray-300 group"
                 >
-                  <div className="w-10 h-10 bg-cyan-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-cyan-500/20 transition-colors">
-                    <MapPin className="w-5 h-5 text-cyan-400" />
+                  <div className="w-10 h-10 bg-rose-500/10 rounded-lg flex items-center justify-center mr-4 group-hover:bg-rose-500/20 transition-colors">
+                    <MapPin className="w-5 h-5 text-amber-400" />
                   </div>
                   <div>
                     <p className="text-xs text-gray-500">Location</p>
@@ -155,8 +155,8 @@ const Contact = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="md:col-span-3"
           >
-            <form onSubmit={handleSubmit} className="bg-gray-800/40 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-cyan-400 mb-6">Send a Message</h3>
+            <form onSubmit={handleSubmit} className="bg-gray-800/40 backdrop-blur-sm border border-rose-500/20 rounded-2xl p-8">
+              <h3 className="text-2xl font-bold text-amber-400 mb-6">Send a Message</h3>
               
               <div className="space-y-4">
                 <div>
@@ -170,7 +170,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-rose-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-rose-500 transition-colors"
                     placeholder="Your Name"
                   />
                 </div>
@@ -186,7 +186,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-rose-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-rose-500 transition-colors"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -202,7 +202,7 @@ const Contact = () => {
                     value={formData.subject}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-cyan-500 transition-colors"
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-rose-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-rose-500 transition-colors"
                     placeholder="What's this about?"
                   />
                 </div>
@@ -218,7 +218,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-900/50 border border-cyan-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-cyan-500 transition-colors resize-none"
+                    className="w-full px-4 py-3 bg-gray-900/50 border border-rose-500/30 rounded-lg text-gray-300 focus:outline-none focus:border-rose-500 transition-colors resize-none"
                     placeholder="Your message here..."
                   ></textarea>
                 </div>
@@ -228,7 +228,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                   whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/80 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-rose-500 to-pink-500 text-white rounded-lg font-semibold shadow-lg shadow-rose-500/50 hover:shadow-rose-500/80 transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isSubmitting ? (
                     <>

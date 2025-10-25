@@ -18,8 +18,8 @@ const Skills = () => {
     <section id="skills" className="relative py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-gray-900">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-rose-500/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,11 +32,11 @@ const Skills = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-400 to-pink-500 bg-clip-text text-transparent">
               Technical Skills
             </span>
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 mx-auto rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-amber-400 to-pink-500 mx-auto rounded-full"></div>
         </motion.div>
 
         {/* Skills Grid */}
@@ -51,14 +51,14 @@ const Skills = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                 whileHover={{ y: -10 }}
-                className="bg-gray-800/40 backdrop-blur-sm border border-cyan-500/20 rounded-2xl p-6 hover:border-cyan-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/20"
+                className="bg-gray-800/40 backdrop-blur-sm border border-rose-500/20 rounded-2xl p-6 hover:border-rose-500/40 transition-all duration-300 hover:shadow-lg hover:shadow-rose-500/20"
               >
                 {/* Category Header */}
                 <div className="flex items-center mb-6">
-                  <div className="w-12 h-12 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-lg flex items-center justify-center mr-4">
-                    <Icon className="w-6 h-6 text-cyan-400" />
+                  <div className="w-12 h-12 bg-gradient-to-br from-rose-500/20 to-pink-500/20 rounded-lg flex items-center justify-center mr-4">
+                    <Icon className="w-6 h-6 text-amber-400" />
                   </div>
-                  <h3 className="text-lg font-bold text-cyan-400">{category}</h3>
+                  <h3 className="text-lg font-bold text-amber-400">{category}</h3>
                 </div>
 
                 {/* Skills List */}
@@ -73,7 +73,7 @@ const Skills = () => {
                     >
                       <div className="flex justify-between items-center mb-2">
                         <span className="text-gray-300 text-sm font-medium">{skill.name}</span>
-                        <span className="text-cyan-400 text-sm font-semibold">{skill.level}%</span>
+                        <span className="text-amber-400 text-sm font-semibold">{skill.level}%</span>
                       </div>
                       <div className="h-2 bg-gray-700/50 rounded-full overflow-hidden">
                         <motion.div
@@ -81,7 +81,7 @@ const Skills = () => {
                           whileInView={{ width: `${skill.level}%` }}
                           viewport={{ once: true }}
                           transition={{ duration: 1, delay: categoryIndex * 0.1 + index * 0.05 + 0.2 }}
-                          className="h-full bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full"
+                          className="h-full bg-gradient-to-r from-amber-400 to-pink-500 rounded-full"
                         ></motion.div>
                       </div>
                     </motion.div>
