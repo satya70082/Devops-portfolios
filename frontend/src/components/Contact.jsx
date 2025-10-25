@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github, MapPin, Send } from 'lucide-react';
+import { Mail, Linkedin, Github, MapPin, Send, Loader2 } from 'lucide-react';
 import { portfolioData } from '../mock';
 import { toast } from '../hooks/use-toast';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL}/api`;
 
 const Contact = () => {
   const { personal } = portfolioData;
@@ -12,15 +16,28 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Mock form submission
-    toast({
-      title: "Message Sent!",
-      description: "Thank you for reaching out. I'll get back to you soon!",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+    
+    try {
+      const response = await axios.post(`${API}/contact`, formData);
+      toast({
+        title: "Message Sent!",
+        description: response.data.message,
+      });
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: error.response?.data?.detail || "Failed to send message. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e) => {
