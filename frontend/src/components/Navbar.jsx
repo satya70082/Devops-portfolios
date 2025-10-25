@@ -42,7 +42,7 @@ const Navbar = () => {
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl font-bold bg-gradient-to-r from-gold-400 via-coral-500 to-magenta-500 bg-clip-text text-transparent cursor-pointer"
               onClick={() => scrollToSection('Home')}
             >
               SP
