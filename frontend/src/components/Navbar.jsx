@@ -33,7 +33,7 @@ const Navbar = () => {
         transition={{ duration: 0.6 }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-cyan-500/10'
+            ? 'bg-gray-900/80 backdrop-blur-md shadow-lg border-b border-amber-500/10'
             : 'bg-transparent'
         }`}
       >
@@ -42,7 +42,7 @@ const Navbar = () => {
             {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-2xl font-bold bg-gradient-to-r from-gold-400 via-coral-500 to-magenta-500 bg-clip-text text-transparent cursor-pointer"
+              className="text-2xl font-bold bg-gradient-to-r from-amber-400 via-rose-500 to-pink-500 bg-clip-text text-transparent cursor-pointer"
               onClick={() => scrollToSection('Home')}
             >
               SP
@@ -57,10 +57,10 @@ const Navbar = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   onClick={() => scrollToSection(item)}
-                  className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 relative group"
+                  className="text-gray-300 hover:text-amber-400 transition-colors duration-300 relative group"
                 >
                   {item}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-400 to-blue-500 group-hover:w-full transition-all duration-300"></span>
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 via-rose-500 to-pink-500 group-hover:w-full transition-all duration-300"></span>
                 </motion.button>
               ))}
             </div>
@@ -68,7 +68,7 @@ const Navbar = () => {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden text-gray-300 hover:text-cyan-400 transition-colors"
+              className="md:hidden text-gray-300 hover:text-amber-400 transition-colors"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -84,7 +84,7 @@ const Navbar = () => {
           x: isMobileMenuOpen ? 0 : '100%'
         }}
         transition={{ duration: 0.3 }}
-        className="fixed top-16 right-0 bottom-0 w-64 bg-gray-900/95 backdrop-blur-md z-40 md:hidden border-l border-cyan-500/10"
+        className="fixed top-16 right-0 bottom-0 w-64 bg-gray-900/95 backdrop-blur-md z-40 md:hidden border-l border-amber-500/10"
       >
         <div className="flex flex-col space-y-4 p-6">
           {navItems.map((item, index) => (
@@ -94,7 +94,7 @@ const Navbar = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.1 }}
               onClick={() => scrollToSection(item)}
-              className="text-gray-300 hover:text-cyan-400 transition-colors duration-300 text-left py-2 px-4 rounded-lg hover:bg-cyan-500/10"
+              className="text-gray-300 hover:text-amber-400 transition-colors duration-300 text-left py-2 px-4 rounded-lg hover:bg-amber-500/10"
             >
               {item}
             </motion.button>
