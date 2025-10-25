@@ -13,7 +13,7 @@ export const portfolioData = {
   },
 
   stats: [
-    { value: "2+", label: "Years Experience" },
+    { value: "Fresher", label: "Years Experience" },
     { value: "15+", label: "Cloud Projects" },
     { value: "20%", label: "Performance Boost" },
     { value: "99.9%", label: "Uptime Achieved" }
