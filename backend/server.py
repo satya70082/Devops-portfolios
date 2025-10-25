@@ -84,6 +84,32 @@ async def get_status_checks():
     
     return status_checks
 
+# Contact Form Endpoint
+@api_router.post("/contact")
+async def create_contact_message(input: ContactMessageCreate):
+    try:
+        # Create ContactMessage object
+        contact_dict = input.model_dump()
+        contact_obj = ContactMessage(**contact_dict)
+        
+        # Convert to dict and serialize datetime to ISO string for MongoDB
+        doc = contact_obj.model_dump()
+        doc['timestamp'] = doc['timestamp'].isoformat()
+        
+        # Insert into MongoDB
+        result = await db.contact_messages.insert_one(doc)
+        
+        logger.info(f"Contact message received from {contact_obj.email}")
+        
+        return {
+            "success": True,
+            "message": "Thank you for reaching out! I'll get back to you soon.",
+            "id": contact_obj.id
+        }
+    except Exception as e:
+        logger.error(f"Error saving contact message: {str(e)}")
+        raise HTTPException(status_code=500, detail="Failed to send message. Please try again.")
+
 # Include the router in the main app
 app.include_router(api_router)
 
