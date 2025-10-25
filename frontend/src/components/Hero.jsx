@@ -98,7 +98,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('projects').scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-lg font-semibold shadow-lg shadow-cyan-500/50 hover:shadow-cyan-500/80 transition-all duration-300"
+              className="px-8 py-3 bg-gradient-to-r from-amber-500 via-rose-500 to-pink-500 text-white rounded-lg font-semibold shadow-lg shadow-rose-500/50 hover:shadow-rose-500/80 transition-all duration-300"
             >
               View Projects
             </motion.button>
@@ -106,7 +106,7 @@ const Hero = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
-              className="px-8 py-3 bg-gray-800/50 border border-cyan-500/30 text-cyan-400 rounded-lg font-semibold hover:bg-cyan-500/10 transition-all duration-300"
+              className="px-8 py-3 bg-gray-800/50 border border-amber-500/30 text-amber-400 rounded-lg font-semibold hover:bg-amber-500/10 transition-all duration-300"
             >
               Get In Touch
             </motion.button>
